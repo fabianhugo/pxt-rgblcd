@@ -98,7 +98,7 @@ namespace rgblcd {
         for (let index = 1; index <= str.length; index++) {
             buf[index] = str.charCodeAt(index - 1)
         }
-        pins.i2cWriteBuffer(0x3E, buf)
+        pins.i2cWriteBuffer(0x70, buf)
     }
 
     /**
