@@ -98,7 +98,7 @@ namespace rgblcd {
         for (let index = 1; index <= str.length; index++) {
             buf[index] = str.charCodeAt(index - 1)
         }
-        pins.i2cWriteBuffer(0x70, buf)
+        pins.i2cWriteBuffer(Command.LCD_ADDRESS, buf)
     }
 
     /**
@@ -155,7 +155,7 @@ namespace rgblcd {
     }
 
     function setLCDCmd(cmd: number) {
-        pins.i2cWriteNumber(0x3E, 0x80 << 8 | cmd, NumberFormat.Int16BE)
+        pins.i2cWriteNumber(Command.LCD_ADDRESS, 0x80 << 8 | cmd, NumberFormat.Int16BE)
     }
 
     function setCursor(col: number, row: number) {
@@ -235,7 +235,7 @@ namespace rgblcd {
 }
 
 enum Command {
-    LCD_ADDRESS = 0x3E,
+    LCD_ADDRESS = 0x70,
     RGB_ADDRESS = 0x62,
 
     //Hintergrundfarben Adressen
