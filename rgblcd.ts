@@ -230,7 +230,7 @@ namespace rgblcd {
     }
 
     function setRGBReg(reg: number, value: number) {
-        pins.i2cWriteNumber(RGB_ADDRESS, reg << 8 | value, NumberFormat.Int16BE)
+        pins.i2cWriteNumber(Command.RGB_ADDRESS, reg << 8 | value, NumberFormat.Int16BE)
     }
 }
 
