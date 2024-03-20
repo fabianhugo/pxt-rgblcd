@@ -239,9 +239,9 @@ enum Command {
     RGB_ADDRESS = 0x30,
 
     //Hintergrundfarben Adressen
-    REG_RED = 0x04,
-    REG_GREEN = 0x03,
-    REG_BLUE = 0x02,
+    REG_RED = 0x06,
+    REG_GREEN = 0x07,
+    REG_BLUE = 0x08,
 
     //Hintergrundfarben modus
     REG_MODE1 = 0x00,
